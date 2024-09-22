@@ -1,4 +1,4 @@
-// ServiceForm.js
+
 import React, { useState, useEffect } from 'react';
 
 function ServiceForm({ addService, updateService, serviceToEdit }) {
@@ -6,7 +6,7 @@ function ServiceForm({ addService, updateService, serviceToEdit }) {
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
 
-  // Populate the form fields when a service is selected for editing
+
   useEffect(() => {
     if (serviceToEdit) {
       setName(serviceToEdit.service.name);
@@ -19,7 +19,7 @@ function ServiceForm({ addService, updateService, serviceToEdit }) {
     e.preventDefault();
     const service = { name, description, price };
 
-    // If editing, update the service, otherwise add a new one
+ 
     if (serviceToEdit) {
       updateService(service);
     } else {
