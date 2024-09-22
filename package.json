@@ -2,7 +2,7 @@
   "name": "healthcare-services-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Srivastavasanjh123.github.io/health-services",
+  "homepage": "https://Srivastavasanjh123.github.io/health-services-app",
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
