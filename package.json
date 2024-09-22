@@ -2,7 +2,7 @@
   "name": "healthcare-services-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://SanjhaliSri.github.io/healthcare-services",
+  "homepage": "https://Srivastavasanjh123.github.io/health-services",
 
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-     "predeploy": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
