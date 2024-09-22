@@ -1,4 +1,3 @@
-// ServiceList.js
 import React from 'react';
 
 function ServiceList({ services, deleteService, handleEdit }) {
