@@ -1,38 +1,159 @@
-.App {
+/* General styling for the whole app */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+/* Container for the whole app */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+h1 {
   text-align: center;
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Service form styling */
+.service-form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.service-form input {
+  padding: 15px;
+  font-size: 1.1em;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.service-form button {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 200px;
+  align-self: flex-end;
+}
+
+.service-form button:hover {
+  background-color: #218838;
+}
+
+/* Service list styling */
+.service-list {
+  margin-top: 30px;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.service-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-name {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.service-description {
+  color: #666;
+  margin-left: 20px;
+  font-size: 1.1em;
+}
+
+.service-price {
+  font-weight: bold;
+  color: #333;
+  margin-right: 20px;
+  font-size: 1.2em;
+}
+
+/* Button for delete and edit actions */
+.service-item button {
+  padding: 10px 15px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left:10px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.delete-btn:hover {
+  background-color: #c82333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.edit-btn {
+  background-color: #ffc107;
+  color: black;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+@media screen and (max-width: 768px) {
+  .service-list-headings, .service-item {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: left;
   }
-  to {
-    transform: rotate(360deg);
+
+  .service-list-headings div, .service-item div {
+    padding: 5px 0; /* Reduce padding to fit mobile screens */
+  }
+
+  .service-actions {
+    justify-content: flex-start;
+    width: 100%; /* Full width for buttons */
+    margin-top: 10px; /* Add space between rows */
+  }
+
+  .service-actions button {
+    width: 45%; /* Make buttons smaller and more compact */
+    margin-right: 10px; /* Add space between edit and delete buttons */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-item {
+    padding: 8px;
+  }
+
+  .service-actions button {
+    width: 100%; /* Buttons take full width on very small screens */
+    margin-bottom: 5px; /* Add margin below for vertical stacking */
   }
 }
